@@ -1,0 +1,782 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E0022127-888E-4F86-8F03-D0E62A345494}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Bulldogs</RootNamespace>
+    <AssemblyName>Bulldogs</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44361</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Bulldogs.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Bulldogs.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=3.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=4.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Owin.4.2.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=4.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Owin.Host.SystemWeb.4.2.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=4.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Owin.Security.4.2.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=4.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Owin.Security.Cookies.4.2.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook, Version=4.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Owin.Security.Facebook.4.2.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google, Version=4.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Owin.Security.Google.4.2.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount, Version=4.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Owin.Security.MicrosoftAccount.4.2.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=4.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Owin.Security.OAuth.4.2.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter, Version=4.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Owin.Security.Twitter.4.2.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SendGrid, Version=9.25.1.0, Culture=neutral, PublicKeyToken=4f047e93159395ca, processorArchitecture=MSIL">
+      <HintPath>packages\SendGrid.9.25.1\lib\net452\SendGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="StarkbankEcdsa, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b2e6337a5d77bfbc, processorArchitecture=MSIL">
+      <HintPath>packages\starkbank-ecdsa.1.3.3\lib\net452\StarkbankEcdsa.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>packages\Microsoft.AspNet.Identity.Owin.2.2.3\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>packages\Microsoft.AspNet.Identity.EntityFramework.2.2.3\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>packages\Microsoft.Owin.Security.Cookies.4.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.Mvc" />
+    <Import Include="System.Web.Mvc.Ajax" />
+    <Import Include="System.Web.Mvc.Html" />
+    <Import Include="System.Web.Routing" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.vb" />
+    <Compile Include="App_Start\FilterConfig.vb" />
+    <Compile Include="App_Start\IdentityConfig.vb" />
+    <Compile Include="App_Start\RouteConfig.vb" />
+    <Compile Include="App_Start\Startup.Auth.vb" />
+    <Compile Include="Controllers\AccountController.vb" />
+    <Compile Include="Controllers\GalleryController.vb" />
+    <Compile Include="Controllers\InfoController.vb" />
+    <Compile Include="Controllers\ManageController.vb" />
+    <Compile Include="Controllers\MerchandiseController.vb" />
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\SiteHelpers.vb" />
+    <Compile Include="Models\AccountViewModels.vb" />
+    <Compile Include="Models\IdentityModels.vb" />
+    <Compile Include="Models\ManageViewModels.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Startup.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\aspnet-BDWC-20211205121208.mdf" />
+    <Content Include="App_Data\aspnet-BDWC-20211205121208_log.ldf">
+      <DependentUpon>aspnet-BDWC-20211205121208.mdf</DependentUpon>
+    </Content>
+    <Content Include="Content\Catagories\About\000001.jpg" />
+    <Content Include="Content\Catagories\About\000002.jpg" />
+    <Content Include="Content\Catagories\About\000003.jpg" />
+    <Content Include="Content\Catagories\About\000004.jpg" />
+    <Content Include="Content\Catagories\About\000005.jpg" />
+    <Content Include="Content\Catagories\About\000006.jpg" />
+    <Content Include="Content\Catagories\About\000007.jpg" />
+    <Content Include="Content\Catagories\About\placeholder.txt" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000001.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000002.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000003.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000004.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000005.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000006.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000007.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000008.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000009.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000010.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000011.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000012.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000013.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000014.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000015.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000016.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000017.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000018.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000019.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000020.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000021.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000022.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000023.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000024.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000025.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000026.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000027.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000028.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000029.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000030.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000031.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000032.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000033.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000034.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000035.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000036.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000037.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000038.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000039.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000040.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\000041.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\01\placeholder.txt" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000001.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000002.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000003.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000004.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000005.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000006.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000007.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000008.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000009.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000010.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000011.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000012.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000013.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000014.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000015.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000016.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000017.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000018.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000019.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000020.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000021.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000022.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000023.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000024.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000025.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000026.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000027.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000028.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000029.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000030.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000031.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000032.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000033.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000034.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000035.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000036.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000037.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000038.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000039.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000040.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\000041.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\02\placeholder.txt" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000001.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000002.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000003.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000004.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000005.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000006.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000007.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000008.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000009.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000010.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000011.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000012.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000013.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000014.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000015.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000016.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000017.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000018.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000019.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000020.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000021.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000022.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000023.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000024.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000025.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000026.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000027.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000028.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000029.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000030.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000031.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000032.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000033.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000034.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000035.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000036.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000037.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000038.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000039.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000040.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000041.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000042.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000043.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000044.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000045.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000046.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\placeholder.txt" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000001.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000002.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000003.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000004.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000005.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000006.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000007.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000008.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000009.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000010.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000011.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000012.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000013.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000014.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000015.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000016.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000017.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000018.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000019.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000020.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000021.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000022.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000023.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000024.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000025.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000026.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000027.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000028.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000029.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000030.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000031.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000032.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000033.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000034.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000035.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000036.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000037.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000038.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000039.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000040.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000041.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000042.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000043.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000044.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\000045.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\04\placeholder.txt" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000001.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000002.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000003.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000004.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000005.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000006.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000007.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000008.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000009.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000010.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000011.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000012.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000013.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000014.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000015.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000016.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000017.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000018.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000019.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000020.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000021.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000022.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000023.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000024.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000025.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000026.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000027.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000028.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000029.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000030.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000031.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000032.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000033.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000034.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000035.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000036.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000037.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000038.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000039.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000040.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000041.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000042.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000043.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000044.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\000045.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\05\placeholder.txt" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000001.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000002.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000003.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000004.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000005.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000006.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000007.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000008.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000009.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000010.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000011.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000012.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000013.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000014.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000015.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000016.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000017.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000018.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000019.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000020.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000021.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000022.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000023.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000024.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000025.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000026.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000027.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000028.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000029.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000030.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000031.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000032.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000033.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000034.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000035.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000036.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000037.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000038.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000039.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000040.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000041.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000042.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000043.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000044.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000045.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000046.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000047.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000048.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000049.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\placeholder.txt" />
+    <Content Include="Content\Catagories\Gallery\Pictures\07\000001.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\07\000002.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\07\000003.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\07\000004.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\07\000005.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\07\000006.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\07\000007.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\07\000008.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\07\000009.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\07\000010.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\07\000011.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\07\000012.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\07\000013.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\07\000014.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\07\000015.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\07\000016.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\07\000017.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\07\000018.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\07\000019.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\07\000020.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\07\000021.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\07\000022.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\07\000023.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\07\000024.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\07\000025.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\07\000026.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\07\000027.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\07\000028.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\07\000029.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\07\placeholder.txt" />
+    <Content Include="Content\Catagories\Gallery\Videos\01\000001.mp4" />
+    <Content Include="Content\Catagories\Gallery\Videos\01\000002.mp4" />
+    <Content Include="Content\Catagories\Gallery\Videos\01\000003.mp4" />
+    <Content Include="Content\Catagories\Gallery\Videos\01\000004.mp4" />
+    <Content Include="Content\Catagories\Gallery\Videos\01\placeholder.txt" />
+    <Content Include="Content\Catagories\Gallery\Videos\02\000001.mp4" />
+    <Content Include="Content\Catagories\Gallery\Videos\02\000002.mp4" />
+    <Content Include="Content\Catagories\Gallery\Videos\02\placeholder.txt" />
+    <Content Include="Content\Catagories\Gallery\Videos\03\placeholder.txt" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Jpg\000001.jpg" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Jpg\000002.jpg" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Jpg\000003.jpg" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Jpg\000004.jpg" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Jpg\000005.jpg" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Jpg\000006.jpg" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Jpg\000007.jpg" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Jpg\000008.jpg" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Jpg\000009.jpg" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Jpg\000010.jpg" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Png\000001.png" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Png\000002.png" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Png\000003.png" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Png\000004.png" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Png\000005.png" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Png\000006.png" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Png\000007.png" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Png\000008.png" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Png\000009.png" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Png\000010.png" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Svg\000001.svg" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Svg\000002.svg" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Svg\000003.svg" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Svg\000004.svg" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Svg\000005.svg" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Svg\000006.svg" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Svg\000007.svg" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Svg\000008.svg" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Svg\000009.svg" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Svg\000010.svg" />
+    <Content Include="Content\Catagories\Icons\Bulldogs\android-chrome-192x192.png" />
+    <Content Include="Content\Catagories\Icons\Bulldogs\android-chrome-512x512.png" />
+    <Content Include="Content\Catagories\Icons\Bulldogs\apple-touch-icon.png" />
+    <Content Include="Content\Catagories\Icons\Bulldogs\favicon-16x16.png" />
+    <Content Include="Content\Catagories\Icons\Bulldogs\favicon-32x32.png" />
+    <Content Include="Content\Catagories\Icons\Bulldogs\favicon.ico" />
+    <Content Include="Content\Catagories\Icons\Bulldogs\favicon.v1.ico" />
+    <Content Include="Content\Catagories\LinkShares\BD-Logo-001.jpg" />
+    <Content Include="Content\Catagories\Logos\BlueSun.svg" />
+    <Content Include="Content\Catagories\PageImages\900x600-image-02.jpg" />
+    <Content Include="Content\Catagories\PageImages\900x800-image-02.jpg" />
+    <Content Include="Content\Catagories\PageImages\900X800-image-03.jpg" />
+    <Content Include="Content\Catagories\PageImages\hate.gif" />
+    <Content Include="Content\Catagories\Svg\Artwork.svg" />
+    <Content Include="Content\Catagories\Svg\backspace.svg" />
+    <Content Include="Content\Catagories\Svg\BD-Body-Head-Master.svg" />
+    <Content Include="Content\Catagories\Svg\BD-Body.svg" />
+    <Content Include="Content\Catagories\Svg\BD-Head-Right-Smile.svg" />
+    <Content Include="Content\Catagories\Svg\BD-Head-Right.svg" />
+    <Content Include="Content\Catagories\Svg\BlueSun.svg" />
+    <Content Include="Content\Catagories\Svg\FB-Home.svg" />
+    <Content Include="Content\Catagories\Svg\FB-Square.svg" />
+    <Content Include="Content\Catagories\Svg\Fundraising.svg" />
+    <Content Include="Content\Catagories\Svg\Google-Square.svg" />
+    <Content Include="Content\Catagories\Svg\Links.svg" />
+    <Content Include="Content\Catagories\Svg\Merchandise.svg" />
+    <Content Include="Content\Catagories\Svg\Pictures.svg" />
+    <Content Include="Content\Catagories\Svg\Schedule.svg" />
+    <Content Include="Content\Catagories\Svg\trackwrestling-logo.svg" />
+    <Content Include="Content\Catagories\Svg\usawrestling-logo.svg" />
+    <Content Include="Content\Catagories\Svg\Video.svg" />
+    <Content Include="Content\Catagories\Svg\Videos.svg" />
+    <Content Include="Css\bootstrap.css.map" />
+    <Content Include="Css\bootstrap.min.css.map" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="My Project\PublishProfiles\FTPProfile.pubxml" />
+    <None Include="My Project\PublishProfiles\IISProfile.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <Content Include="Css\bootstrap.css" />
+    <Content Include="Css\bootstrap.min.css" />
+    <Content Include="Css\Site.css" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.6.0.min.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\sitescripts.js" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.vbhtml" />
+    <Content Include="Views\Account\ConfirmEmail.vbhtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.vbhtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.vbhtml" />
+    <Content Include="Views\Account\ForgotPassword.vbhtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.vbhtml" />
+    <Content Include="Views\Account\Login.vbhtml" />
+    <Content Include="Views\Account\Register.vbhtml" />
+    <Content Include="Views\Account\ResetPassword.vbhtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.vbhtml" />
+    <Content Include="Views\Account\SendCode.vbhtml" />
+    <Content Include="Views\Account\VerifyCode.vbhtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.vbhtml" />
+    <Content Include="Views\Manage\ChangePassword.vbhtml" />
+    <Content Include="Views\Manage\Index.vbhtml" />
+    <Content Include="Views\Manage\ManageLogins.vbhtml" />
+    <Content Include="Views\Manage\SetPassword.vbhtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.vbhtml" />
+    <Content Include="Views\Shared\Lockout.vbhtml" />
+    <Content Include="Views\Shared\_LoginPartial.vbhtml" />
+    <Content Include="Views\Info\About.vbhtml" />
+    <Content Include="Views\Info\Contact.vbhtml" />
+    <Content Include="Views\Info\Schedule.vbhtml" />
+    <Content Include="Views\Info\TOS.vbhtml" />
+    <Content Include="Views\Info\Privacy.vbhtml" />
+    <Content Include="Views\Merchandise\Store.vbhtml" />
+    <Content Include="Views\Shared\_Navbar.vbhtml" />
+    <Content Include="Views\Shared\_Footer.vbhtml" />
+    <Content Include="Views\Info\Fundraise.vbhtml" />
+    <Content Include="Views\Info\TrackWrestling.vbhtml" />
+    <Content Include="Views\Shared\Cards\About\_Brand.vbhtml" />
+    <Content Include="Views\Shared\Cards\About\_Features.vbhtml" />
+    <Content Include="Views\Shared\Cards\About\_Fundraising.vbhtml" />
+    <Content Include="Views\Shared\Cards\About\_Important.vbhtml" />
+    <Content Include="Views\Shared\Cards\About\_Merchandise.vbhtml" />
+    <Content Include="Views\Shared\Cards\About\_Schedule.vbhtml" />
+    <Content Include="Views\Shared\Cards\Gallery\_Pictures.vbhtml" />
+    <Content Include="Views\Shared\Cards\Gallery\_Videos.vbhtml" />
+    <Content Include="Views\Shared\Cards\Gallery\_WebArt.vbhtml" />
+    <Content Include="Views\Shared\Cards\_Contact.vbhtml" />
+    <Content Include="Views\Shared\Cards\_Designer.vbhtml" />
+    <Content Include="Views\Gallery\Index.vbhtml" />
+    <Content Include="Views\Gallery\Gallery.vbhtml" />
+    <Content Include="Views\Gallery\Pictures01.vbhtml" />
+    <Content Include="Views\Gallery\Pictures02.vbhtml" />
+    <Content Include="Views\Gallery\Pictures03.vbhtml" />
+    <Content Include="Views\Gallery\Pictures04.vbhtml" />
+    <Content Include="Views\Gallery\Pictures05.vbhtml" />
+    <Content Include="Views\Gallery\Pictures06.vbhtml" />
+    <Content Include="Views\Gallery\Pictures07.vbhtml" />
+    <Content Include="Views\Gallery\Pictures08.vbhtml" />
+    <Content Include="Views\Gallery\Pictures09.vbhtml" />
+    <Content Include="Views\Gallery\Pictures10.vbhtml" />
+    <Content Include="Views\Gallery\Videos01.vbhtml" />
+    <Content Include="Views\Gallery\Videos02.vbhtml" />
+    <Content Include="Views\Gallery\Videos03.vbhtml" />
+    <Content Include="Views\Gallery\WebArtJPG.vbhtml" />
+    <Content Include="Views\Gallery\WebArtPNG.vbhtml" />
+    <Content Include="Views\Gallery\WebArtSVG.vbhtml" />
+    <Content Include="Views\Shared\_Carousel.vbhtml" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\jquery-3.6.0.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\_ViewStart.vbhtml" />
+    <Content Include="Views\Shared\Error.vbhtml" />
+    <Content Include="Views\Shared\_Layout.vbhtml" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62963</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44361/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
