@@ -4,7 +4,7 @@
     Dim siteURL As String = SiteHelpers.GetSiteInfo("SiteURL")
     Dim siteName As String = "The Bulldogs Youth Wrestling Club"
     Dim siteDescription As String = "Dedicated to the Bulldogs Youth Wrestlers"
-    Dim linkShareImage As String = "http://bulldogs.illustrate.net/Content/Catagories/LinkShares/BD-Logo-001.jpg"
+    Dim linkShareImage As String = "https://illustrate.net/Bulldogs/Content/Catagories/LinkShares/BD-Logo-001.jpg"
 
     ' Set og Stuff
     Dim canonical As String = siteURL
@@ -87,24 +87,22 @@ End Code
     <meta name="twitter:image:width" content="1200" />
     <meta name="twitter:image:height" content="600" />
 
-    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Css/css")
     @Scripts.Render("~/bundles/modernizr")
 
     <!-- Jquery -->
     <script src="~/Scripts/jquery-3.6.0.min.js"></script>
 
-    <!-- Bootstrap -->
+    <!-- Bootstrap Css and Scripts -->
     <script src="~/Scripts/bootstrap.min.js"></script>
     <link href="~/Css/bootstrap.min.css" rel="stylesheet" />
 
     @*<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">*@
 
-    <!-- Site Local Css -->
-    <link href="~/Css/site.css" rel="stylesheet" />
-
-    <!-- Site Local Scripts -->
+    <!-- Site Local Css and Scripts -->
     <script src="~/Scripts/sitescripts.js"></script>
+    <link href="~/Css/site.css" rel="stylesheet" />
 
 </head>
 

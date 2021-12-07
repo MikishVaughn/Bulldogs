@@ -16,10 +16,10 @@ Public Module BundleConfig
                     "~/Scripts/modernizr-*"))
 
         bundles.Add(New Bundle("~/bundles/bootstrap").Include(
-                  "~/Scripts/bootstrap.js"))
+                  "~/Scripts/bootstrap.min.js"))
 
-        bundles.Add(New StyleBundle("~/Content/css").Include(
-                  "~/Content/bootstrap.css",
+        bundles.Add(New StyleBundle("~/Css/css").Include(
+                  "~/Css/bootstrap.min.css",
                   "~/Css/site.css"))
     End Sub
 End Module

@@ -388,6 +388,7 @@
     <Content Include="Content\Catagories\Gallery\Pictures\03\000044.jpg" />
     <Content Include="Content\Catagories\Gallery\Pictures\03\000045.jpg" />
     <Content Include="Content\Catagories\Gallery\Pictures\03\000046.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\03\000047.jpg" />
     <Content Include="Content\Catagories\Gallery\Pictures\03\placeholder.txt" />
     <Content Include="Content\Catagories\Gallery\Pictures\04\000001.jpg" />
     <Content Include="Content\Catagories\Gallery\Pictures\04\000002.jpg" />
@@ -530,6 +531,7 @@
     <Content Include="Content\Catagories\Gallery\Pictures\06\000047.jpg" />
     <Content Include="Content\Catagories\Gallery\Pictures\06\000048.jpg" />
     <Content Include="Content\Catagories\Gallery\Pictures\06\000049.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\06\000050.jpg" />
     <Content Include="Content\Catagories\Gallery\Pictures\06\placeholder.txt" />
     <Content Include="Content\Catagories\Gallery\Pictures\07\000001.jpg" />
     <Content Include="Content\Catagories\Gallery\Pictures\07\000002.jpg" />
@@ -560,15 +562,20 @@
     <Content Include="Content\Catagories\Gallery\Pictures\07\000027.jpg" />
     <Content Include="Content\Catagories\Gallery\Pictures\07\000028.jpg" />
     <Content Include="Content\Catagories\Gallery\Pictures\07\000029.jpg" />
+    <Content Include="Content\Catagories\Gallery\Pictures\07\000030.jpg" />
     <Content Include="Content\Catagories\Gallery\Pictures\07\placeholder.txt" />
     <Content Include="Content\Catagories\Gallery\Videos\01\000001.mp4" />
     <Content Include="Content\Catagories\Gallery\Videos\01\000002.mp4" />
     <Content Include="Content\Catagories\Gallery\Videos\01\000003.mp4" />
     <Content Include="Content\Catagories\Gallery\Videos\01\000004.mp4" />
+    <Content Include="Content\Catagories\Gallery\Videos\01\000005.mp4" />
     <Content Include="Content\Catagories\Gallery\Videos\01\placeholder.txt" />
     <Content Include="Content\Catagories\Gallery\Videos\02\000001.mp4" />
     <Content Include="Content\Catagories\Gallery\Videos\02\000002.mp4" />
-    <Content Include="Content\Catagories\Gallery\Videos\02\placeholder.txt" />
+    <Content Include="Content\Catagories\Gallery\Videos\02\000003.mp4" />
+    <Content Include="Content\Catagories\Gallery\Videos\02\000004.mp4" />
+    <Content Include="Content\Catagories\Gallery\Videos\02\000005.mp4" />
+    <Content Include="Content\Catagories\Gallery\Videos\02\000006.mp4" />
     <Content Include="Content\Catagories\Gallery\Videos\03\placeholder.txt" />
     <Content Include="Content\Catagories\Gallery\WebArt\Jpg\000001.jpg" />
     <Content Include="Content\Catagories\Gallery\WebArt\Jpg\000002.jpg" />
@@ -632,7 +639,6 @@
     <Content Include="Content\Catagories\Svg\usawrestling-logo.svg" />
     <Content Include="Content\Catagories\Svg\Video.svg" />
     <Content Include="Content\Catagories\Svg\Videos.svg" />
-    <Content Include="Css\bootstrap.css.map" />
     <Content Include="Css\bootstrap.min.css.map" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -647,13 +653,10 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="packages.config" />
-    <Content Include="Css\bootstrap.css" />
     <Content Include="Css\bootstrap.min.css" />
     <Content Include="Css\Site.css" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />
-    <Content Include="Scripts\jquery.min.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\sitescripts.js" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.vbhtml" />
@@ -689,7 +692,7 @@
     <Content Include="Views\Shared\Cards\About\_Brand.vbhtml" />
     <Content Include="Views\Shared\Cards\About\_Features.vbhtml" />
     <Content Include="Views\Shared\Cards\About\_Fundraising.vbhtml" />
-    <Content Include="Views\Shared\Cards\About\_Important.vbhtml" />
+    <Content Include="Views\Shared\Cards\About\_Links.vbhtml" />
     <Content Include="Views\Shared\Cards\About\_Merchandise.vbhtml" />
     <Content Include="Views\Shared\Cards\About\_Schedule.vbhtml" />
     <Content Include="Views\Shared\Cards\Gallery\_Pictures.vbhtml" />

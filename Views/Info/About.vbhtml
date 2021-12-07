@@ -32,6 +32,6 @@ End Code
 
     <!-- Important Info Card -->
     <div class="row gx-1 gx-lg-5">
-        @Html.Partial("Cards/About/_Important")
+        @Html.Partial("Cards/About/_Links")
     </div>
 </div>

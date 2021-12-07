@@ -27,7 +27,7 @@
     If ViewData("message") = "Store" Then
         choice05 = "active"
     End If
-    If ViewData("message") = "Links" Then
+    If ViewData("message") = "Gallery" Then
         choice06 = "active"
     End If
     If ViewData("message") = "Privacy" Then
