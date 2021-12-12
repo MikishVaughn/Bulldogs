@@ -112,6 +112,12 @@ footer {
     font-size: 16px;
 }
 
+.wagroup-btn {
+    min-width: 60px;
+    height: 35px;
+    font-size: 16px;
+}
+
 #myBtn {
     display: none;
     position: fixed;

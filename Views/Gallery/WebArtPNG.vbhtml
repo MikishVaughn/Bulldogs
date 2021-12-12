@@ -26,32 +26,39 @@ End Code
     <div class="row gx-1 gx-lg-5">
 
         <!-- Back Button -->
-        <div class="col-3 mb-2">
+        <div class="col-2 mb-2">
             <div class="h-100 text-center">
-                <a class="btn btn-danger text-sucess btn-sm group-btn" href="~/Gallery/Gallery">
+                <a class="btn btn-danger text-sucess btn-sm wagroup-btn" href="~/Gallery/Gallery">
                     <img class="backimage" src="~/Content/Catagories/Svg/backspace.svg" />
                 </a>
             </div>
         </div>
 
         <!-- Column Button Svg -->
-        <div class="col-3 mb-2">
+        <div class="col-2 mb-2">
             <div class="h-100 w-100 text-center">
-                <a class="btn btn-primary btn-sm group-btn" href="~/Gallery/WebArtSVG">.Svg</a>
+                <a class="btn btn-primary btn-sm wagroup-btn" href="~/Gallery/WebArtSVG">.Svg</a>
             </div>
         </div>
 
         <!-- Column Button Png -->
-        <div class="col-3 mb-2">
+        <div class="col-2 mb-2">
             <div class="h-100 w-100 text-center">
-                <a class="btn btn-dark btn-sm group-btn" href="~/Gallery/WebArtPNG">.Png</a>
+                <a class="btn btn-dark btn-sm wagroup-btn" href="~/Gallery/WebArtPNG">.Png</a>
             </div>
         </div>
 
         <!-- Column Button Jpg -->
-        <div class="col-3 mb-2">
+        <div class="col-2 mb-2">
             <div class="h-100 w-100 text-center">
-                <a class="btn btn-primary btn-sm group-btn" href="~/Gallery/WebArtJPG">.Jpg</a>
+                <a class="btn btn-primary btn-sm wagroup-btn" href="~/Gallery/WebArtJPG">.Jpg</a>
+            </div>
+        </div>
+
+        <!-- Group 04 Button -->
+        <div class="col-2 mb-2">
+            <div class="h-100 w-100 text-center">
+                <a class="btn btn-primary btn-sm wagroup-btn" href="~/Gallery/WebArtZip">.Zip</a>
             </div>
         </div>
 

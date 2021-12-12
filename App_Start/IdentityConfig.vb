@@ -20,6 +20,15 @@ Public Class SmsService
 
     Public Function SendAsync(message As IdentityMessage) As Task Implements IIdentityMessageService.SendAsync
         ' Plug in your SMS service here to send a text message.
+
+        ' ASPSMS Begin 
+        Dim soapSms = New ASPSMSX2.ASPSMSX2SoapClient("ASPSMSX2Soap")
+        soapSms.SendSimpleTextSMS(System.Configuration.ConfigurationManager.AppSettings("SMSAccountIdentification"),
+                                  System.Configuration.ConfigurationManager.AppSettings("SMSAccountPassword"), message.Destination,
+                                  System.Configuration.ConfigurationManager.AppSettings("SMSAccountFrom"), message.Body)
+        soapSms.Close()
+        ' ASPSMS End
+
         Return Task.FromResult(0)
     End Function
 End Class

@@ -98,6 +98,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -207,7 +208,13 @@
     <Compile Include="App_Start\IdentityConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="App_Start\Startup.Auth.vb" />
+    <Compile Include="Connected Services\ASPSMSX2\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\AccountController.vb" />
+    <Compile Include="Controllers\LinksController.vb" />
     <Compile Include="Controllers\GalleryController.vb" />
     <Compile Include="Controllers\InfoController.vb" />
     <Compile Include="Controllers\ManageController.vb" />
@@ -250,6 +257,15 @@
     <Content Include="App_Data\aspnet-BDWC-20211205121208_log.ldf">
       <DependentUpon>aspnet-BDWC-20211205121208.mdf</DependentUpon>
     </Content>
+    <Content Include="Connected Services\ASPSMSX2\Bulldogs.ASPSMSX2.vouchers.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\ASPSMSX2\configuration91.svcinfo" />
+    <None Include="Connected Services\ASPSMSX2\configuration.svcinfo" />
+    <None Include="Connected Services\ASPSMSX2\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
     <Content Include="Content\Catagories\About\000001.jpg" />
     <Content Include="Content\Catagories\About\000002.jpg" />
     <Content Include="Content\Catagories\About\000003.jpg" />
@@ -569,6 +585,7 @@
     <Content Include="Content\Catagories\Gallery\Videos\01\000003.mp4" />
     <Content Include="Content\Catagories\Gallery\Videos\01\000004.mp4" />
     <Content Include="Content\Catagories\Gallery\Videos\01\000005.mp4" />
+    <Content Include="Content\Catagories\Gallery\Videos\01\000006.mp4" />
     <Content Include="Content\Catagories\Gallery\Videos\01\placeholder.txt" />
     <Content Include="Content\Catagories\Gallery\Videos\02\000001.mp4" />
     <Content Include="Content\Catagories\Gallery\Videos\02\000002.mp4" />
@@ -577,6 +594,10 @@
     <Content Include="Content\Catagories\Gallery\Videos\02\000005.mp4" />
     <Content Include="Content\Catagories\Gallery\Videos\02\000006.mp4" />
     <Content Include="Content\Catagories\Gallery\Videos\03\placeholder.txt" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Zip\BD-Logo-Master-Black.svg" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Zip\BD-Logo-Master-White.svg" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Eps\BD-Logo-Master-Black.svg" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Eps\BD-Logo-Master-White.svg" />
     <Content Include="Content\Catagories\Gallery\WebArt\Jpg\000001.jpg" />
     <Content Include="Content\Catagories\Gallery\WebArt\Jpg\000002.jpg" />
     <Content Include="Content\Catagories\Gallery\WebArt\Jpg\000003.jpg" />
@@ -586,6 +607,7 @@
     <Content Include="Content\Catagories\Gallery\WebArt\Jpg\000007.jpg" />
     <Content Include="Content\Catagories\Gallery\WebArt\Jpg\000008.jpg" />
     <Content Include="Content\Catagories\Gallery\WebArt\Jpg\000009.jpg" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Jpg\000011.jpg" />
     <Content Include="Content\Catagories\Gallery\WebArt\Jpg\000010.jpg" />
     <Content Include="Content\Catagories\Gallery\WebArt\Png\000001.png" />
     <Content Include="Content\Catagories\Gallery\WebArt\Png\000002.png" />
@@ -596,6 +618,7 @@
     <Content Include="Content\Catagories\Gallery\WebArt\Png\000007.png" />
     <Content Include="Content\Catagories\Gallery\WebArt\Png\000008.png" />
     <Content Include="Content\Catagories\Gallery\WebArt\Png\000009.png" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Png\000011.png" />
     <Content Include="Content\Catagories\Gallery\WebArt\Png\000010.png" />
     <Content Include="Content\Catagories\Gallery\WebArt\Svg\000001.svg" />
     <Content Include="Content\Catagories\Gallery\WebArt\Svg\000002.svg" />
@@ -606,6 +629,7 @@
     <Content Include="Content\Catagories\Gallery\WebArt\Svg\000007.svg" />
     <Content Include="Content\Catagories\Gallery\WebArt\Svg\000008.svg" />
     <Content Include="Content\Catagories\Gallery\WebArt\Svg\000009.svg" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Svg\000011.svg" />
     <Content Include="Content\Catagories\Gallery\WebArt\Svg\000010.svg" />
     <Content Include="Content\Catagories\Icons\Bulldogs\android-chrome-192x192.png" />
     <Content Include="Content\Catagories\Icons\Bulldogs\android-chrome-512x512.png" />
@@ -640,12 +664,18 @@
     <Content Include="Content\Catagories\Svg\Video.svg" />
     <Content Include="Content\Catagories\Svg\Videos.svg" />
     <Content Include="Css\bootstrap.min.css.map" />
+    <None Include="Connected Services\ASPSMSX2\aspsmsx2.wsdl" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Eps\BD-Logo-Master-Black.zip" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Eps\BD-Logo-Master-White.zip" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Zip\BD-Logo-Master-Black.zip" />
+    <Content Include="Content\Catagories\Gallery\WebArt\Zip\BD-Logo-Master-White.zip" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
-    <None Include="My Project\PublishProfiles\FolderProfile.pubxml" />
-    <None Include="My Project\PublishProfiles\FTPProfile.pubxml" />
+    <None Include="My Project\PublishProfilesx\FolderProfile.pubxml" />
+    <None Include="My Project\PublishProfilesx\FTPProfile.pubxml" />
+    <None Include="My Project\PublishProfilesx\IISProfile.pubxml" />
     <None Include="My Project\PublishProfiles\IISProfile.pubxml" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -721,6 +751,9 @@
     <Content Include="Views\Shared\_Carousel.vbhtml" />
     <Content Include="Scripts\bootstrap.min.js.map" />
     <Content Include="Scripts\jquery-3.6.0.min.map" />
+    <Content Include="Views\Links\WebArtJPG.vbhtml" />
+    <Content Include="Views\Gallery\WebArtEPS.vbhtml" />
+    <Content Include="Views\Gallery\WebArtZIP.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
@@ -736,6 +769,12 @@
     <Content Include="Views\Shared\Error.vbhtml" />
     <Content Include="Views\Shared\_Layout.vbhtml" />
     <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ASPSMSX2\" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

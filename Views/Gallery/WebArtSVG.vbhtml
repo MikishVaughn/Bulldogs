@@ -20,42 +20,48 @@ End Code
             <span class="text-dark">@catagory:</span><span class="text-light fs-4"> Svg</span>
         </h3>
         <p class="text-center text-light">A collection Bulldog images used by us.</p>
-        <p class="text-start text-dark"><span class="fw-bolder">Note:</span> Various formats and sizes not displayed are also available such as <span class="fw-bold">.Eps, Psd, Pdf, .Gif, and Transparent Png.</span> These images were mainly created using Adobe Illustrator with existing artwork as guidelines. This Website uses <span class="fw-bold">.Svg</span> files for its graphics.  <span class="fw-bold">.Svg</span> as well as  <span class="fw-bold">.Eps</span> file formats are preferred by printers because of their crisp scalability.</p>
+        
     </div>
 
     <!-- Button Row-->
     <div class="row gx-1 gx-lg-5">
 
         <!-- Back Button -->
-        <div class="col-3 mb-2">
+        <div class="col-2 mb-2">
             <div class="h-100 text-center">
-                <a class="btn btn-danger text-sucess btn-sm group-btn" href="~/Gallery/Gallery">
+                <a class="btn btn-danger text-sucess btn-sm wagroup-btn" href="~/Gallery/Gallery">
                     <img class="backimage" src="~/Content/Catagories/Svg/backspace.svg" />
                 </a>
             </div>
         </div>
 
         <!-- Group 01 Button -->
-        <div class="col-3 mb-2">
+        <div class="col-2 mb-2">
             <div class="h-100 w-100 text-center">
-                <a class="btn btn-dark btn-sm group-btn" href="~/Gallery/WebArtSVG">.Svg</a>
+                <a class="btn btn-dark btn-sm wagroup-btn" href="~/Gallery/WebArtSVG">.Svg</a>
             </div>
         </div>
 
         <!-- Group 02 Button -->
-        <div class="col-3 mb-2">
+        <div class="col-2 mb-2">
             <div class="h-100 w-100 text-center">
-                <a class="btn btn-primary btn-sm group-btn" href="~/Gallery/WebArtPNG">.Png</a>
+                <a class="btn btn-primary btn-sm wagroup-btn" href="~/Gallery/WebArtPNG">.Png</a>
             </div>
         </div>
 
         <!-- Group 03 Button -->
-        <div class="col-3 mb-2">
+        <div class="col-2 mb-2">
             <div class="h-100 w-100 text-center">
-                <a class="btn btn-primary btn-sm group-btn" href="~/Gallery/WebArtJPG">.Jpg</a>
+                <a class="btn btn-primary btn-sm wagroup-btn" href="~/Gallery/WebArtJPG">.Jpg</a>
             </div>
         </div>
 
+        <!-- Group 04 Button -->
+        <div class="col-2 mb-2">
+            <div class="h-100 w-100 text-center">
+                <a class="btn btn-primary btn-sm wagroup-btn" href="~/Gallery/WebArtZip">.Zip</a>
+            </div>
+        </div>
     </div>
 
     <!-- Image List -->

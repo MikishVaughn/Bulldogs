@@ -30,6 +30,18 @@
         ViewData("PageTitle") = "Website PNG Artwork"
         Return View()
     End Function
+    Function WebArtEPS() As ActionResult
+        ViewData("Message") = "WebArtEPS"
+        ViewData("PageHeader") = ViewData("Message")
+        ViewData("PageTitle") = "Website EPS Masters"
+        Return View()
+    End Function
+    Function WebArtZIP() As ActionResult
+        ViewData("Message") = "WebArtZIP"
+        ViewData("PageHeader") = ViewData("Message")
+        ViewData("PageTitle") = "Website Artwork Zip Files"
+        Return View()
+    End Function
     Function Pictures01() As ActionResult
         ViewData("Message") = "Pictures01"
         ViewData("PageHeader") = ViewData("Message")
