@@ -52,10 +52,7 @@ End Code
                     </li>
                     <li class="nav-item text-light">
                         <a class="nav-link @choice02" style="font-size: 12px;" href="~/Info/Contact">Contact Us</a>
-                    </li>
-                    <li class="nav-item text-light">
-                        <a class="nav-link @choice06" style="font-size: 12px;" href="~/Gallery/Gallery">Gallery</a>
-                    </li>
+                    </li>                   
                     <li class="nav-item text-light">
                         <a class="nav-link @choice07" style="font-size: 12px;" href="~/Info/Privacy">Privacy Policy</a>
                     </li>

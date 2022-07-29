@@ -82,7 +82,7 @@ End Code
 
         </ul>
 
-        @If Request.IsAuthenticated Then
+        @*@If Request.IsAuthenticated Then
 
             @Using Html.BeginForm("LogOff", "Account", FormMethod.Post, New With {.id = "logoutForm", .class = "navbar-right"})
 
@@ -110,7 +110,7 @@ End Code
                 </li>
             </ul>
 
-        End If
+        End If*@
 
     </div>
 

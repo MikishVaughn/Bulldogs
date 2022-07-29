@@ -2,9 +2,9 @@
 
     ' Get Site Info From SiteHelers class where it is stored.
     Dim siteURL As String = SiteHelpers.GetSiteInfo("SiteURL")
-    Dim siteName As String = "The Bulldogs Youth Wrestling Club"
-    Dim siteDescription As String = "Dedicated to the Bulldogs Youth Wrestlers"
-    Dim linkShareImage As String = "https://illustrate.net/Bulldogs/Content/Catagories/LinkShares/BD-Logo-001.jpg"
+    Dim siteName As String = "The Southern Illinois Bulldogs Wrestling Club"
+    Dim siteDescription As String = "Dedicated to the Southern Illinois Bulldogs Youth Wrestlers"
+    Dim linkShareImage As String = "https://southernillinoisbulldogs.com/content/catagories/linkshares/BD-Logo-001.jpg"
 
     ' Set og Stuff
     Dim canonical As String = siteURL
@@ -63,6 +63,9 @@ End Code
     <link rel="shortcut icon" type="image/jpeg" href="~/Content/Catagories/Icons/Bulldogs/android-chrome-192x192.png" />
     <link rel="apple-touch-icon" type="image/pgn" href="~/Content/Images/Site/Catagories/Icons/Bulldogs/android-chrome-192x192.png" />
     <link rel="apple-touch-icon" type="image/pgn" sizes="180x180" href="~/Content/Catagories/Icons/Bulldogs/apple-touch-icon.png">
+
+    <!-- FB App ID unused -->
+    <meta property="fb:app_id" content="966242223397117" />
 
     <!-- Link Share Setup -->
     <link rel="canonical" href="@canonical" />

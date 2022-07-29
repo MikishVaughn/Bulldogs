@@ -185,10 +185,10 @@ Public Class AccountController
             End If
             ' For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
             ' Send an email with this link
-            ' Dim code = Await UserManager.GeneratePasswordResetTokenAsync(user.Id)
-            ' Dim callbackUrl = Url.Action("ResetPassword", "Account", New With { .userId = user.Id, code }, protocol := Request.Url.Scheme)
-            ' Await UserManager.SendEmailAsync(user.Id, "Reset Password", "Please reset your password by clicking <a href=""" & callbackUrl & """>here</a>")
-            ' Return RedirectToAction("ForgotPasswordConfirmation", "Account")
+            Dim code = Await UserManager.GeneratePasswordResetTokenAsync(user.Id)
+            Dim callbackUrl = Url.Action("ResetPassword", "Account", New With {.userId = user.Id, code}, protocol:=Request.Url.Scheme)
+            Await UserManager.SendEmailAsync(user.Id, "Reset Password", "Please reset your password by clicking <a href=""" & callbackUrl & """>here</a>")
+            Return RedirectToAction("ForgotPasswordConfirmation", "Account")
         End If
 
         ' If we got this far, something failed, redisplay form

@@ -12,7 +12,7 @@
 
         ' Site Name
         If AttributeName = "SiteName" Then
-            Return "Bulldogs Youth Wrestling Club"
+            Return "Southern Illinois Bulldogs"
         End If
         If AttributeName = "SiteNameShort" Then
             Return "Bulldogs Wrestling"
@@ -20,12 +20,12 @@
 
         ' Site Description
         If AttributeName = "SiteDescription" Then
-            Return "This web site is dedicated to the Bulldogs Wrestlers!"
+            Return "This web site is dedicated to the Southern Illinois Bulldogs Wrestlers!"
         End If
 
         ' Site URL
         If AttributeName = "SiteURL" Then
-            Return "http://Bulldogs.illustrate.net"
+            Return "https://SouthernIllinoisBulldogs.com"
         End If
 
         ' Site Contact
@@ -71,16 +71,16 @@
 
         ' Site Images
         If AttributeName = "BigLogo" Then
-            Return "https://illustrate.net/Bulldogs/Content/Catagories/Svg/BD-Body.svg"
+            Return "/Content/Catagories/Svg/BD-Body-[New].svg"
         End If
         If AttributeName = "SmallLogo" Then
-            Return "https://illustrate.net/Bulldogs/Content/Catagories/Svg/BD-Body-Head-Master.svg"
+            Return "/Content/Catagories/Svg/BD-Body-Head-Master.svg"
         End If
         'If AttributeName = "PageImage_About" Then
-        '    Return "https:/illustrate.net/Bulldogs/Content/Catagories/PageImages/900x800-image-03.jpg"
+        '    Return "https:/SouthernIllinoisBulldogs/Content/Catagories/PageImages/900x800-image-03.jpg"
         'End If
         If AttributeName = "LinkShare" Then
-            Return "https:/illustrate.net/Bulldogs/Content/Catagories/LinkShares/BD-Logo-001.jpg"
+            Return "/Content/Catagories/LinkShares/BD-Logo-001.jpg"
         End If
 
         ' Site Designer
@@ -94,7 +94,7 @@
             Return "https://mikish.com"
         End If
         If AttributeName = "SiteDesignerLogo" Then
-            Return "https:/illustrate.net/Bulldogs/Content/Catagories/Svg/BlueSun.svg"
+            Return "https:/SouthernIllinoisBulldogs/Content/Catagories/Svg/BlueSun.svg"
         End If
 
         'If we make it here then there was a coding failure!
@@ -125,7 +125,7 @@
             If HttpContext.Current.Request.IsLocal Then
                 Count = IO.Directory.GetFiles("D:\Projects\Repos\Bulldogs\Content\Catagories\" + folder + "\", "*" + extension).Length()
             Else
-                Count = IO.Directory.GetFiles("h:\root\home\mikish-001\www\illustrate\Bulldogs\Content\Catagories\" + folder + "\", "*" + extension).Length()
+                Count = IO.Directory.GetFiles("h:\root\home\mikish-001\www\SIBulldogs\Content\Catagories\" + folder + "\", "*" + extension).Length()
             End If
         Catch ex As Exception
             MsgBox("Image Directory Not Found", MsgBoxStyle.Critical)
@@ -180,7 +180,7 @@
     <AllowAnonymous>
     Public Shared Function GetImageLocation() As String
 
-        Dim ImageLocation As String = "https://Illustrate.net/Bulldogs/Content/Catagories/"
+        Dim ImageLocation As String = "/Content/Catagories/"
         If HttpContext.Current.Request.IsLocal Then
             ImageLocation = "/Content/Catagories/"
         End If

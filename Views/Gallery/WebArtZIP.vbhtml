@@ -4,7 +4,7 @@
     Dim group As String = "eps"
     Dim extension As String = ".zip"
 
-    Dim folder As String = "http://Illustrate.net/Bulldogs/Content/Catagories/Gallery/" + catagory + "/" + group + "/"
+    Dim folder As String = "/Content/Catagories/Gallery/" + catagory + "/" + group + "/"
     Dim filecount As Integer = SiteHelpers.ImageCount("Gallery/" + catagory + "/" + group + "/", extension)
 
 End Code
@@ -70,12 +70,33 @@ End Code
             <div class="col-12 py-1">
                 <a onclick="download1()" style="margin-right: auto; margin-left: auto; width: 280px; border: solid 2px; border-left-color: dimgray; border-top-color: dimgray;" class="nav-link bg-light text-center text-black py-2 rounded" id="newTab" href="#">
 
-                    <img style="height: 160px;" src="~/Content/Catagories/Gallery/WebArt/Zip/BD-Logo-Master-Black.svg" /> <h6>Download<br />BD-Logo-Master-Black.zip</h6>
+                    <img style="height: 160px;" src="~/Content/Catagories/Gallery/WebArt/Zip/BD-Logo-Master-Black-[New].svg" /> <h6>Download<br />BD-Logo-Master-Black-[New].zip</h6>
                 </a>
             </div>
 
             <div>
                 <a onclick="download2()" style="margin-right: auto; margin-left: auto; width: 280px; border: solid 2px; border-left-color: dimgray; border-top-color: dimgray;" class="nav-link bg-light text-center text-black py-2 rounded" href="#">
+
+                    <img style="height: 160px;" src="~/Content/Catagories/Gallery/WebArt/Zip/BD-Logo-Master-BlackWhite-[New].svg" /> <h6>Download<br />BD-Logo-Master-BlackWhite-[New].zip</h6>
+                </a>
+            </div>
+
+            <div>
+                <a onclick="download3()" style="margin-right: auto; margin-left: auto; width: 280px; border: solid 2px; border-left-color: dimgray; border-top-color: dimgray;" class="nav-link bg-light text-center text-black py-2 rounded" href="#">
+
+                    <img style="height: 160px;" src="~/Content/Catagories/Gallery/WebArt/Zip/BD-Logo-Master-White-[New].svg" /> <h6>Download<br />BD-Logo-Master-White-[New].zip</h6>
+                </a>
+            </div>
+
+            <div class="col-12 py-1">
+                <a onclick="download4()" style="margin-right: auto; margin-left: auto; width: 280px; border: solid 2px; border-left-color: dimgray; border-top-color: dimgray;" class="nav-link bg-light text-center text-black py-2 rounded" id="newTab" href="#">
+
+                    <img style="height: 160px;" src="~/Content/Catagories/Gallery/WebArt/Zip/BD-Logo-Master-Black.svg" /> <h6>Download<br />BD-Logo-Master-Black.zip</h6>
+                </a>
+            </div>
+
+            <div>
+                <a onclick="download5()" style="margin-right: auto; margin-left: auto; width: 280px; border: solid 2px; border-left-color: dimgray; border-top-color: dimgray;" class="nav-link bg-light text-center text-black py-2 rounded" href="#">
 
                     <img style="height: 160px;" src="~/Content/Catagories/Gallery/WebArt/Zip/BD-Logo-Master-White.svg" /> <h6>Download<br />BD-Logo-Master-White.zip</h6>
                 </a>
@@ -119,17 +140,41 @@ End Code
 <script>
     function download1() {
         var txt;
-        var r = confirm("OK to Download 'BD-Logo-Master-Black.zip'?");
+        var r = confirm("OK to Download 'BD-Logo-Master-Black-[New].zip'?");
         if (r == true) {
-            window.open("https://illustrate.net/bulldogs/Content/Catagories/Gallery/WebArt/Zip/BD-Logo-Master-Black.zip")
+            window.open("https://SouthernIllinoisBulldogs/Content/Catagories/Gallery/WebArt/Zip/BD-Logo-Master-Black-[New].zip")
         } else {}
     }
 
     function download2() {
         var txt;
+        var r = confirm("OK to Download 'BD-Logo-Master-BlackWhite-[New].zip'?");
+        if (r == true) {
+            window.open("https://SouthernIllinoisBulldogs/Content/Catagories/Gallery/WebArt/Zip/BD-Logo-Master-BlackWhite-[New].zip")
+        } else {}
+    }
+
+    function download3() {
+        var txt;
+        var r = confirm("OK to Download 'BD-Logo-Master-White-[New].zip'?");
+        if (r == true) {
+            window.open("https://SouthernIllinoisBulldogs/Content/Catagories/Gallery/WebArt/Zip/BD-Logo-Master-White-[New].zip")
+        } else { }
+    }
+
+    function download4() {
+        var txt;
+        var r = confirm("OK to Download 'BD-Logo-Master-Black.zip'?");
+        if (r == true) {
+            window.open("https://SouthernIllinoisBulldogs/Content/Catagories/Gallery/WebArt/Zip/BD-Logo-Master-Black.zip")
+        } else { }
+    }
+
+    function download5() {
+        var txt;
         var r = confirm("OK to Download 'BD-Logo-Master-White.zip'?");
         if (r == true) {
-            window.open("https://illustrate.net/bulldogs/Content/Catagories/Gallery/WebArt/Zip/BD-Logo-Master-White.zip")
-        } else {}
+            window.open("https://SouthernIllinoisBulldogs/Content/Catagories/Gallery/WebArt/Zip/BD-Logo-Master-White.zip")
+        } else { }
     }
 </script>

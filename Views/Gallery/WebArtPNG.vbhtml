@@ -4,7 +4,7 @@
     Dim group As String = "Png"
     Dim extension As String = ".png"
 
-    Dim folder As String = "http://Illustrate.net/Bulldogs/Content/Catagories/Gallery/" + catagory + "/" + group + "/"
+    Dim folder As String = "/Content/Catagories/Gallery/" + catagory + "/" + group + "/"
     Dim filecount As Integer = SiteHelpers.ImageCount("Gallery/" + catagory + "/" + group + "/", extension)
 
 End Code
