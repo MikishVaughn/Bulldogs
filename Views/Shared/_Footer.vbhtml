@@ -103,12 +103,12 @@ End Code
                     Else
 
                         @<ul Class="navbar-nav ms-auto flex-nowrap ps-2">
-                            <li class="nav-item">
+                            @*<li class="nav-item">
                                 <a class="nav-link" href="~/Account/Register">Register</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="~/Account/Login">Log In</a>
-                            </li>
+                            </li>*@
                         </ul>
 
                     End If

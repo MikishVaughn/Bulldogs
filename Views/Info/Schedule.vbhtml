@@ -14,7 +14,7 @@ End Code
     </div>
 
     <!-- Head Coach -->
-    <h3 class="py-2 text-center text-dark">Head Coach: <a class="nav-link text-white" href="~/Info/Contact">Butch Schloemann</a></h3>
+    @*<h3 class="py-2 text-center text-dark">Head Coach: <a class="nav-link text-white" href="~/Info/Contact">Butch Schloemann</a></h3>*@
 
     <!-- Results Sheet -->
     <p class="text-center">

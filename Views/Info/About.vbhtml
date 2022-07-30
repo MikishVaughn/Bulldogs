@@ -18,9 +18,13 @@ End Code
 
     <!-- Flyer -->
     <div class="row mb-3">
-        <img src="~/Content/Catagories/Gallery/Flyers/Brawl.jpg" />
+        <img src="~/Content/Catagories/Gallery/Flyers/Camp.jpg" />
     </div>
-    
+
+    @*<div class="row mb-3">
+        <img src="~/Content/Catagories/Gallery/Flyers/Brawl.jpg" />
+    </div>*@
+
     <!-- Content Row-->
     <div class="row gx-1 gx-lg-5">
 

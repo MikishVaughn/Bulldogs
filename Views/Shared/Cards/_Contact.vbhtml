@@ -34,7 +34,7 @@ End Code
             <div class="card-text text-start">
                 <p>@address1<br />@address2</p>
                 <p>@phone1</p>
-                <p class="py-1"><a class="text-black" style="font-size: 12px;" href="mailto: @siteEmailContact">@siteEmailContact</a></p>
+                <p class="py-1"><a class="text-black" style="font-size: 10px;" href="mailto: @siteEmailContact">@siteEmailContact</a></p>
             </div>
 
             <!-- Buttons -->

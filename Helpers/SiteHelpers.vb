@@ -35,7 +35,7 @@
 
         ' Site Address
         If AttributeName = "Address1" Then
-            Return "1107 s. Main st"
+            Return "1107 S. Main St."
         End If
         If AttributeName = "Address2" Then
             Return "Red Bud, Illinois 62278"
@@ -48,7 +48,7 @@
 
         ' Site Email
         If AttributeName = "SiteEmailContact" Then
-            Return "waterloowrestling@yahoo.com"
+            Return "SouthernIllinoisBulldogs@Gmail.com"
         End If
 
         ' Site Sales and Support
